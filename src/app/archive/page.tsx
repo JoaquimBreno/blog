@@ -1,5 +1,5 @@
 // pages/archive.tsx
-import BlogList from '@/components/blogLists';
+import BlogList from '@/components/BlogLists';
 import { Metadata } from 'next';
 import React from 'react';
 import Footer from '@/components/FooterRSS';

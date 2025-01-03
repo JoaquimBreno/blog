@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { generateRssFeed } from '@/lib/rss';
 import Footer  from '@/components/FooterRSS';
 
-const BlogList = dynamic(() => import('@/components/blogLists'), {
+const BlogList = dynamic(() => import('@/components/BlogLists'), {
   ssr: true
 });
 
