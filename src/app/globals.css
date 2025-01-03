@@ -32,6 +32,9 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --blur-1: 210 80% 75%; /* Azul céu claro */
+    --blur-2: 200 85% 80%; /* Azul claro vibrante */
+    --blur-3: 220 75% 85%;
   }
 
   /* Detects if the user prefers a dark color scheme */
@@ -62,9 +65,43 @@ body {
       --chart-3: 30 80% 55%;
       --chart-4: 280 65% 60%;
       --chart-5: 340 75% 55%;
+      --blur-1: 215 90% 50%; /* Azul royal escuro */
+      --blur-2: 205 95% 45%; /* Azul cobalto */
+      --blur-3: 230 100% 40%; /* Azul marinho vibrante */
     }
   }
 }
+
+@layer utilities {
+  /* Adicionando classes de utilidade customizadas */
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  /* Adicionando a classe para animar um "blob" com animação personalizada */
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+}
+
+/* Definindo a animação do "blob" */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
 
 @layer base {
   * {
