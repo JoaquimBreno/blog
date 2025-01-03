@@ -9,9 +9,9 @@
             <link>http://localhost:3000</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 03 Jan 2025 04:48:02 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 03 Jan 2025 05:32:37 GMT</lastBuildDate>
         <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 03 Jan 2025 04:48:02 GMT</pubDate>
+        <pubDate>Fri, 03 Jan 2025 05:32:37 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2025]]></copyright>
         <item>
             <title><![CDATA[Exploring the Power of Next.js API Routes]]></title>

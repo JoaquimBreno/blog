@@ -5,10 +5,10 @@ export function Profile() {
     <Card className="relative overflow-hidden bg-[hsl(var(--card-background))]/40 border-[hsl(var(--border-color))] backdrop-blur-xl transition-colors duration-300">
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--card-background))]/50 to-[hsl(var(--card-background))]/50 z-0" />
       <div className="relative z-10 p-8">
-        <div className="flex flex-col justify-center items-center">
-          <div className="w-48 h-48 rounded-lg overflow-hidden mb-8 ring-2 ring-[hsl(var(--border-color))]">
+        <div className="flex flex-col items-center">
+          <div className="w-48 h-48 rounded-full overflow-hidden mb-8 ring-2 ring-[hsl(var(--border-color))]">
             <img
-              src="./teste.jpeg"
+              src="teste.jpeg"
               alt="Profile"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
