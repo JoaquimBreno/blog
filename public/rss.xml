@@ -9,28 +9,10 @@
             <link>https://your-blog-domain.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 17 Feb 2025 03:21:27 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 17 Feb 2025 04:13:10 GMT</lastBuildDate>
         <atom:link href="https://your-blog-domain.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 17 Feb 2025 03:21:27 GMT</pubDate>
+        <pubDate>Mon, 17 Feb 2025 04:13:10 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2025]]></copyright>
-        <item>
-            <title><![CDATA[Exploring the Power of Next.js API Routes]]></title>
-            <description><![CDATA[Learn how to harness the power of Next.js API routes for building robust server-side functionalities in your applications.]]></description>
-            <link>https://your-blog-domain.com/blog/post3</link>
-            <guid isPermaLink="true">https://your-blog-domain.com/blog/post3</guid>
-            <category><![CDATA[Web Development]]></category>
-            <dc:creator><![CDATA[Jeffrey Emanuel]]></dc:creator>
-            <pubDate>Fri, 01 Nov 2024 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Mastering Tailwind CSS: Tips and Tricks for Modern Web Design]]></title>
-            <description><![CDATA[Discover powerful tips and tricks to unlock the full potential of Tailwind CSS for building modern, responsive web designs.]]></description>
-            <link>https://your-blog-domain.com/blog/post2</link>
-            <guid isPermaLink="true">https://your-blog-domain.com/blog/post2</guid>
-            <category><![CDATA[Web Development]]></category>
-            <dc:creator><![CDATA[Jeffrey Emanuel]]></dc:creator>
-            <pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[Introducing Our New Next.js Blogging System with Tailwind CSS]]></title>
             <description><![CDATA[A look at our sleek and efficient new blogging system built with Next.js and Tailwind CSS, designed for fast, responsive, and visually appealing content delivery.]]></description>
@@ -38,7 +20,7 @@
             <guid isPermaLink="true">https://your-blog-domain.com/blog/post1</guid>
             <category><![CDATA[Web Development]]></category>
             <dc:creator><![CDATA[Jeffrey Emanuel]]></dc:creator>
-            <pubDate>Sat, 28 Sep 2024 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 17 Feb 2025 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
