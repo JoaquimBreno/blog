@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Sidebar } from "@/components/Sidebar";
+import Head from "next/head";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -24,8 +25,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://joaquimbreno.com",
+    "name": "Joaquim Breno",
+    "description": "An unconventional blog exploring tech adventures and personal insights, through the unique lens of Joaquim Breno.",
+    "author": {
+      "@type": "Person",
+      "name": "Joaquim Breno"
+    }
+  };
+
   return (
     <html lang="en">
+      <Head>
+        <title>Your Site Title</title>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
