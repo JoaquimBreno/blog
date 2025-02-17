@@ -17,6 +17,8 @@ export function Profile() {
               src="https://avatars.githubusercontent.com/u/62159887?v=4"
               alt="Profile"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              width={400}
+              height={400}
             />
           </div>
           <div className="text-center">

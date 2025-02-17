@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/getcachedposts';
 import Loader from '@/components/ui/loader';
 import { Suspense } from 'react';
-import Head from 'next/head';
 // Dynamically import client components
 const BlogPost = dynamic(() => import('@/components/BlogPosts'), {
   ssr: true,
@@ -98,9 +97,7 @@ export default async function BlogPostPage({ params }: {params: Promise<{ slug: 
 
   return (
     <>
-    <Head>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-    </Head>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <Suspense fallback={<Loader />}>
       <BlogPost post={post} relatedPosts={relatedPosts} />
     </Suspense>

@@ -2,24 +2,24 @@
     <channel>
         <title><![CDATA[Your Blog Name]]></title>
         <description><![CDATA[Your blog description]]></description>
-        <link>https://your-blog-domain.com</link>
+        <link>http://localhost:3000</link>
         <image>
-            <url>https://your-blog-domain.com/logo.jpeg</url>
+            <url>http://localhost:3000/logo.jpeg</url>
             <title>Your Blog Name</title>
-            <link>https://your-blog-domain.com</link>
+            <link>http://localhost:3000</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 17 Feb 2025 04:13:10 GMT</lastBuildDate>
-        <atom:link href="https://your-blog-domain.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 17 Feb 2025 04:13:10 GMT</pubDate>
+        <lastBuildDate>Mon, 17 Feb 2025 15:46:54 GMT</lastBuildDate>
+        <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Mon, 17 Feb 2025 15:46:54 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2025]]></copyright>
         <item>
             <title><![CDATA[Introducing Our New Next.js Blogging System with Tailwind CSS]]></title>
             <description><![CDATA[A look at our sleek and efficient new blogging system built with Next.js and Tailwind CSS, designed for fast, responsive, and visually appealing content delivery.]]></description>
-            <link>https://your-blog-domain.com/blog/post1</link>
-            <guid isPermaLink="true">https://your-blog-domain.com/blog/post1</guid>
+            <link>http://localhost:3000/blog/post1</link>
+            <guid isPermaLink="true">http://localhost:3000/blog/post1</guid>
             <category><![CDATA[Web Development]]></category>
-            <dc:creator><![CDATA[Jeffrey Emanuel]]></dc:creator>
+            <dc:creator><![CDATA[Joaquim Breno]]></dc:creator>
             <pubDate>Mon, 17 Feb 2025 00:00:00 GMT</pubDate>
         </item>
     </channel>
