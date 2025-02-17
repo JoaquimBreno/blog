@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { generateRssFeed } from '@/lib/rss';
 import Footer  from '@/components/FooterRSS';
+import { Suspense } from "react";
+import Loader from '@/components/ui/loader';
 
 const BlogList = dynamic(() => import('@/components/BlogLists'), {
   ssr: true
@@ -28,19 +30,23 @@ async function BlogContent() {
   }
     return (
       <div className="flex-1 p-4 lg:p-8">
+        <Suspense fallback={<Loader />}>
         {/* Sections can also be individual components if they grow in complexity */}
-        <section className="mb-8">
-          <h2 className="text-4xl font-bold mb-4">Latest Posts</h2>
-          <BlogList posts={latestPosts} />
-          <div className="mt-4">
-            <Link href="/archive" passHref>
-              <Button type="submit">View Full Archive</Button>
-            </Link>
-          </div>
-          {/* Iterate over data and render BlogPost components */}
-        </section>
-        {/* SubscribeForm Component */}
-        <SubscribeForm />
+          <section className="mb-8">
+            <h2 className="text-4xl font-bold mb-4">Latest Posts</h2>
+            
+              <BlogList posts={latestPosts} />
+            
+            <div className="mt-4">
+              <Link href="/archive" passHref>
+                <Button type="submit">View Full Archive</Button>
+              </Link>
+            </div>
+            {/* Iterate over data and render BlogPost components */}
+          </section>
+          {/* SubscribeForm Component */}
+          <SubscribeForm />
+        </Suspense>
         <Footer />
       </div>
       

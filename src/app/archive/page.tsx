@@ -5,6 +5,8 @@ import React from 'react';
 import Footer from '@/components/FooterRSS';
 import { generateRssFeed } from '@/lib/rss';
 import { getAllPosts } from '@/lib/getcachedposts';
+import { Suspense } from 'react';
+import Loader from '@/components/ui/loader';
 
 export const metadata: Metadata = {
   title: 'Blog Archive - Your Blog Name',
@@ -24,7 +26,9 @@ const ArchivePage: React.FC = async () => {
     return (
       <div className="flex-1 p-4 lg:p-8">
         <h1 className="text-3xl font-bold mb-4">Blog Archive</h1>
-        <BlogList posts={posts} full={true}/>
+        <Suspense fallback={<Loader />}>
+          <BlogList posts={posts} full={true} />
+        </Suspense>
         <Footer />
       </div>
     );

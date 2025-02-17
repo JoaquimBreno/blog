@@ -5,6 +5,8 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/getcachedposts';
+import Loader from '@/components/ui/loader';
+import { Suspense } from 'react';
 
 // Dynamically import client components
 const BlogPost = dynamic(() => import('@/components/BlogPosts'), {
@@ -80,6 +82,8 @@ export default async function BlogPostPage({ params }: {params: Promise<{ slug: 
   const relatedPosts = getRelatedPosts(post, cachedPosts);
 
   return (
-    <BlogPost post={post} relatedPosts={relatedPosts} />
+    <Suspense fallback={<Loader />}>
+      <BlogPost post={post} relatedPosts={relatedPosts} />
+    </Suspense>
   );
 }
