@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>Your Site Title</title>
+        <title>Joaquim Breno</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
