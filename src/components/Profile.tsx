@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 export function Profile() {
   const tags = [
@@ -12,7 +13,7 @@ export function Profile() {
       <div className="relative z-10 p-8">
         <div className="flex flex-col items-center">
           <div className="w-48 h-48 rounded-full overflow-hidden mb-8 ring-2 ring-[hsl(var(--border-color))]">
-            <img
+            <Image
               src="https://avatars.githubusercontent.com/u/62159887?v=4"
               alt="Profile"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://joaquimbreno.com
+
+# Sitemaps
+Sitemap: https://joaquimbreno.com/sitemap.xml
