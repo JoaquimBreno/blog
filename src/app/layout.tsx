@@ -44,7 +44,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://joaquimbreno.com" />
         <meta property="og:title" content="Joaquim Breno" />
         <meta property="og:description" content="An unconventional blog exploring tech adventures and personal insights, through the unique lens of Joaquim Breno." />
-
+        <meta name="google-site-verification" content="Af4coKDHkz3c1dZuVrD0QaPW_EgObxDq46jsvM6F4eA" />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
