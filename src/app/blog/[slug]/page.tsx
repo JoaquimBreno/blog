@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/getcachedposts';
 import Loader from '@/components/ui/loader';
 import { Suspense } from 'react';
-
+import Head from 'next/head';
 // Dynamically import client components
 const BlogPost = dynamic(() => import('@/components/BlogPosts'), {
   ssr: true,
@@ -81,9 +81,29 @@ export default async function BlogPostPage({ params }: {params: Promise<{ slug: 
 
   const relatedPosts = getRelatedPosts(post, cachedPosts);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "image": post.coverImage,
+    "url": `https://joaquimbreno.com/blog/${slug}`
+  };
+
+
   return (
+    <>
+    <Head>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+    </Head>
     <Suspense fallback={<Loader />}>
       <BlogPost post={post} relatedPosts={relatedPosts} />
     </Suspense>
+    </>
   );
 }
