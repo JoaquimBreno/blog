@@ -34,12 +34,12 @@ const BlogPost: React.FC<{
   };
 
   return (
-    <div className="bg-[var(--background)] text-[var(--foreground)] font-sans leading-normal tracking-normal">
-      <header className="fixed w-full z-10 top-0 bg-opacity-70 bg-[var(--card)] backdrop-blur-md transition duration-300 border">
+    <div className="bg-white text-black font-sans leading-normal tracking-normal" style={{ fontFamily: "Geist Mono, monospace" }}>
+      <header className="fixed w-full z-10 top-0 bg-white bg-opacity-95 backdrop-blur-md transition duration-300 border-b border-gray-300">
         <ScrollProgressBar />
         <nav className="container mx-auto px-4 py-2">
           <Link href="/blog">
-            <span className="text-[var(--foreground)] hover:text-gray-600">← Back to Blog</span>
+            <span className="hover:underline" style={{ fontFamily: "Geist Mono, monospace" }}>← Back to Blog</span>
           </Link>
         </nav>
       </header>
@@ -61,22 +61,22 @@ const BlogPost: React.FC<{
               </div>
             )}
             <div>
-              {post.author && (
-                <p className="font-semibold text-[var(--foreground)]">{post.author}</p>
-              )}
-              {post.date && (
-                <p className="text-sm text-[var(--muted-foreground)]">
-                  {formatDate(post.date)}
-                </p>
-              )}
+            {post.author && (
+              <p style={{ fontFamily: "Geist Mono, monospace" }}>{post.author}</p>
+            )}
+            {post.date && (
+              <p className="text-sm" style={{ fontFamily: "Geist Mono, monospace" }}>
+                {formatDate(post.date)}
+              </p>
+            )}
             </div>
           </div>
           {post.readingTime && (
-            <p className="text-sm text-[var(--muted-foreground)]">{post.readingTime}</p>
+            <p className="text-sm" style={{ fontFamily: "Geist Mono, monospace" }}>{post.readingTime}</p>
           )}
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--secondary-foreground)] mb-4">
+        <h1 className="text-3xl md:text-4xl mb-8" style={{ fontFamily: "Geist Mono, monospace" }}>
           {post.title || "Untitled Post"}
         </h1>
 
@@ -84,24 +84,8 @@ const BlogPost: React.FC<{
 
         {renderHTMLContent()}
 
-        {post.tags && post.tags.length > 0 && (
-          <div className="mt-8">
-            <h3 className="text-xl font-semibold mb-2">Tags:</h3>
-            <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-[var(--muted)] text-[var(--foreground)] px-3 py-1 rounded-full text-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
         {post.author && (
-          <div className="mt-12 bg-[var(--card)] p-6 rounded-lg shadow-md">
+          <div className="mt-12 pt-8 border-t border-gray-300">
             <div className="flex items-center mb-4">
               {post.authorImage ? (
                 <Image
@@ -109,17 +93,17 @@ const BlogPost: React.FC<{
                   alt={post.author}
                   width={64}
                   height={64}
-                  className="rounded-full mr-4"
+                  className="mr-4"
                 />
               ) : (
-                <div className="w-16 h-16 bg-gray-300 rounded-full mr-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-gray-300 mr-4 flex items-center justify-center">
                   <span className="text-gray-600">?</span>
                 </div>
               )}
               <div>
-                <h3 className="text-xl font-semibold text-[var(--foreground)]">{post.author}</h3>
+                <h3 className="text-xl" style={{ fontFamily: "Geist Mono, monospace" }}>{post.author}</h3>
                 {post.authorBio && (
-                  <p className="text-[var(--muted-foreground)]">{post.authorBio}</p>
+                  <p style={{ fontFamily: "Geist Mono, monospace", lineHeight: "150%" }}>{post.authorBio}</p>
                 )}
               </div>
             </div>
@@ -131,33 +115,25 @@ const BlogPost: React.FC<{
         )}
       </div>
 
-      <footer className="bg-[var(--foreground)] text-[var(--background)] py-12 mt-16">
+      <footer className="bg-white border-t border-gray-300 py-12 mt-16">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-[var(--muted-foreground)]">
-            Built with NextJS GitHub Markdown Blog
+          <p style={{ fontFamily: "Geist Mono, monospace" }}>
+            Built with Cavalcante's GitHub Markdown Blog System 
           </p>
           <div className="flex justify-center space-x-4 mt-4">
             <a
-              href="https://github.com"
+              href="https://github.com/JoaquimBreno"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--background)] hover:text-[var(--secondary-foreground)]"
+              className="hover:underline"
             >
               <Github size={24} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://www.linkedin.com/in/joaquimbreno/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--background)] hover:text-[var(--secondary-foreground)]"
-            >
-              <Twitter size={24} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[var(--background)] hover:text-[var(--secondary-foreground)]"
+              className="hover:underline"
             >
               <Linkedin size={24} />
             </a>

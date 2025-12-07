@@ -1,31 +1,29 @@
-import { UserRound, FolderIcon, UsersIcon, BookText } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
 export const navItems = [
-  { name: "About", icon: UserRound, href: "/" },
-  { name: "Blog", icon: BookText, href: "/blog" },
-  { name: "Archive", icon: FolderIcon, href: "/archive" },
-  { name: "Subscribe", icon: UsersIcon, href: "/subscribe" },
+  { name: "Posts", href: "/blog" },
+  { name: "About", href: "/" },
+  { name: "Resume", href: "/resume" },
+  { name: "Archive", href: "/archive" },
+  // TODO: Uncomment when Subscribe feature is ready
+  // { name: "Subscribe", href: "/subscribe" },
 ];
 
 export function NavItems() {
   return (
-    <div className="flex justify-center lg:justify-start lg:block lg:space-y-1">
+    <nav className="flex justify-center lg:justify-start gap-4 lg:gap-0 lg:flex-col">
       {navItems.map((item) => {
-        const Icon = item.icon;
         return (
-          <Link href={item.href} key={item.name} passHref>
-            <Button
-              variant="ghost"
-              className="w-full justify-center lg:justify-start px-3 font-medium text-center gap-2 text-base md:text-lg lg:text-xl"
-            >
-              <Icon className="hidden sm:block" />
-              {item.name}
-            </Button>
+          <Link 
+            href={item.href} 
+            key={item.name}
+            className="hover:underline text-sm lg:text-base transition-opacity hover:opacity-70"
+            style={{ fontFamily: "Geist Mono, monospace" }}
+          >
+            {item.name}
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 }

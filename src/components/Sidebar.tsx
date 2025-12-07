@@ -25,16 +25,16 @@ export function Sidebar({ className }: SidebarProps) {
       />
 
       {/* Mobile/Tablet Sidebar */}
-      <div className="inset-0 z-40 bg-background/80 backdrop-blur-sm transition-all duration-100 
+      <div className="inset-0 z-40 bg-white/80 backdrop-blur-sm transition-all duration-100 
                     data-[state=closed]:animate-out data-[state=closed]:fade-out 
                     peer-checked:block lg:hidden hidden">
-        <nav className="lg:hidden left-0 top-0 h-full border-r bg-background p-6 shadow-lg">
+        <nav className="lg:hidden left-0 top-0 h-full border-r border-gray-300 bg-white p-6">
           <SidebarContent />
         </nav>
       </div>
 
       {/* Desktop Sidebar */}
-      <nav className={cn("hidden lg:flex flex-col gap-4 p-4 ", className)}>
+      <nav className={cn("hidden lg:flex flex-col gap-4 p-8 bg-white", className)}>
         <SidebarContent />
       </nav>
     </>

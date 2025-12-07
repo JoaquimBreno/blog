@@ -86,7 +86,8 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		fontFamily: {
-		'system': ['-apple-system', 'sans-serif'],
+		'mono': ['Geist Mono', 'monospace'],
+		'sans': ['Geist Mono', 'monospace'],
 		}
   	}
   },

@@ -48,7 +48,7 @@ const SocialShare: React.FC<SocialShareProps> = ({ title }) => {
           href={getShareUrl(currentUrl, title)}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 hover:text-gray-900 transition-colors"
+          className="text-black hover:opacity-70 transition-opacity"
         >
           {icon}
         </a>

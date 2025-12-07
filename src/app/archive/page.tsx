@@ -24,11 +24,13 @@ const ArchivePage: React.FC = async () => {
       console.error('Error generating RSS feed:', rssError);
     }
     return (
-      <div className="flex-1 p-4 lg:p-8">
-        <h1 className="text-3xl font-bold mb-4">Blog Archive</h1>
-        <Suspense fallback={<Loader />}>
-          <BlogList posts={posts} full={true} />
-        </Suspense>
+      <div className="flex-1 p-4 lg:p-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl mb-8" style={{ fontFamily: "Geist Mono, monospace" }}>Archive</h1>
+          <Suspense fallback={<Loader />}>
+            <BlogList posts={posts} full={true} />
+          </Suspense>
+        </div>
         <Footer />
       </div>
     );

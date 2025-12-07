@@ -1,4 +1,5 @@
-import SubscribeForm from "@/components/Subscribe";
+// TODO: Uncomment when Subscribe feature is ready
+// import SubscribeForm from "@/components/Subscribe";
 import dynamic from 'next/dynamic';
 import { getAllPosts } from "@/lib/getcachedposts";
 import { Metadata } from 'next';
@@ -29,23 +30,25 @@ async function BlogContent() {
     console.error('Error generating RSS feed:', rssError);
   }
     return (
-      <div className="flex-1 p-4 lg:p-8">
+      <div className="flex-1 p-4 lg:p-8 bg-white">
         <Suspense fallback={<Loader />}>
-        {/* Sections can also be individual components if they grow in complexity */}
-          <section className="mb-8">
-            <h2 className="text-4xl font-bold mb-4">Latest Posts</h2>
+          <section className="mb-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl mb-8" style={{ fontFamily: "Geist Mono, monospace" }}>Latest Posts</h2>
             
               <BlogList posts={latestPosts} />
             
-            <div className="mt-4">
+            <div className="mt-8">
               <Link href="/archive" passHref>
-                <Button type="submit">View Full Archive</Button>
+                <Button type="submit" className="bg-black text-white hover:bg-gray-800" style={{ fontFamily: "Geist Mono, monospace" }}>
+                  View Full Archive
+                </Button>
               </Link>
             </div>
-            {/* Iterate over data and render BlogPost components */}
           </section>
-          {/* SubscribeForm Component */}
-          <SubscribeForm />
+          {/* TODO: Uncomment when Subscribe feature is ready */}
+          {/* <div className="max-w-4xl mx-auto">
+            <SubscribeForm />
+          </div> */}
         </Suspense>
         <Footer />
       </div>

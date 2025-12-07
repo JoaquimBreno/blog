@@ -52,11 +52,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black`}
+        style={{ fontFamily: "var(--font-geist-mono)" }}
       >
-        <div className="lg:flex  min-h-screen">
-          <Sidebar className="w-1/5 border-r" ></Sidebar>
-          <main className="flex-1 leading-normal tracking-normal">
+        <div className="lg:flex min-h-screen bg-white">
+          <Sidebar className="w-48 border-r border-gray-300" ></Sidebar>
+          <main className="flex-1" style={{ fontFamily: "var(--font-geist-mono)", lineHeight: "150%" }}>
             {children}
           </main>
         </div>
