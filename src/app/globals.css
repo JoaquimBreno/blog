@@ -122,17 +122,91 @@ body {
   @apply text-foreground;
 }
 
+/* Inline code */
 .prose code {
   font-family: "Geist Mono", monospace;
   background-color: #f5f5f5;
   padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Code blocks */
+.prose pre {
+  font-family: "Geist Mono", monospace;
+  background-color: #f8f8f8;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 1.25em;
+  overflow-x: auto;
+  line-height: 1.6;
+  margin: 1.5em 0;
+}
+
+.prose pre code {
+  font-family: "Geist Mono", monospace;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.875em;
+  line-height: 1.6;
+  display: block;
+}
+
+/* Reset spans inside code blocks for better display */
+.prose pre code span {
+  display: inline;
+  line-height: inherit;
+  white-space: pre-wrap;
+}
+
+/* Ensure nested spans also display correctly */
+.prose pre code span span {
+  display: inline;
+  white-space: inherit;
+}
+
+/* Preserve whitespace and line breaks in code */
+.prose pre code {
+  white-space: pre;
+}
+
+/* Make code scrollable on small screens */
+.prose pre {
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Syntax highlighting with better contrast */
+.prose pre code .token.comment {
+  color: #505050;
+  font-style: italic;
+}
+
+.prose pre code .token.string {
+  color: #0a0a0a;
+}
+
+.prose pre code .token.keyword {
+  color: #000000;
+  font-weight: 700;
+}
+
+.prose pre code .token.function {
+  color: #1a1a1a;
+}
+
+.prose pre code .token.operator {
+  color: #000000;
+}
+
+/* Make all code text more visible by default */
+.prose pre code {
+  color: #1a1a1a;
 }
 
 .prose pre {
-  font-family: "Geist Mono", monospace;
-  background-color: #f5f5f5;
-  padding: 1em;
-  overflow-x: auto;
+  color: #1a1a1a;
 }
 
 .prose blockquote {

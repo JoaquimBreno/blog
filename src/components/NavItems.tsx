@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 export const navItems = [
-  { name: "Posts", href: "/blog" },
   { name: "About", href: "/" },
   { name: "Resume", href: "/resume" },
+  { name: "Posts", href: "/blog" },
   { name: "Archive", href: "/archive" },
   // TODO: Uncomment when Subscribe feature is ready
   // { name: "Subscribe", href: "/subscribe" },
