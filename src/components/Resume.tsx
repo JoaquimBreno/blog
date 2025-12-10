@@ -2,7 +2,8 @@ export function Resume() {
   const monoFont = { fontFamily: "Geist Mono, monospace", lineHeight: "150%" };
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="bg-white p-6">
+      <div className="max-w-4xl mx-auto">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl mb-4" style={monoFont}>Joaquim Breno Brito Cavalcante</h1>
@@ -177,6 +178,7 @@ export function Resume() {
           processing, and AI education.
         </p>
       </section>
+      </div>
     </div>
   );
 }

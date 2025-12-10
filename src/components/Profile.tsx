@@ -14,7 +14,7 @@ export function Profile() {
         />
       </div>
       <div>
-        <h1 className="text-3xl mb-6" style={{ fontFamily: "Geist Mono, monospace" }}>Joaquim Breno Brito Cavalcante</h1>
+        <h1 className="text-3xl mb-6" style={{ fontFamily: "Geist Mono, monospace" }}>Joaquim Breno</h1>
         <p className="mb-4" style={{ fontFamily: "Geist Mono, monospace", lineHeight: "150%" }}>
           ML Engineer / Computer Engineer / Tech Enthusiast
         </p>
