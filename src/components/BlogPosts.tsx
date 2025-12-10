@@ -118,7 +118,7 @@ const BlogPost: React.FC<{
       <footer className="bg-white border-t border-gray-300 py-12 mt-16">
         <div className="container mx-auto px-4 text-center">
           <p style={{ fontFamily: "Geist Mono, monospace" }}>
-            Built with Cavalcante's GitHub Markdown Blog System 
+            Built with Cavalcante&apos;s GitHub Markdown Blog System 
           </p>
           <div className="flex justify-center space-x-4 mt-4">
             <a

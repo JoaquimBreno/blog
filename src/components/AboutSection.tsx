@@ -7,7 +7,7 @@ export function AboutSection() {
           tech culture, software development, and artificial intelligence.
         </p>
         <p style={{ fontFamily: "Geist Mono, monospace", lineHeight: "150%" }}>
-          Hey there! I'm someone who gets a real kick out of seeing my knowledge solve real-world problems—bonus 
+          Hey there! I&apos;m someone who gets a real kick out of seeing my knowledge solve real-world problems—bonus 
           points if I can actually see it working, whether in the digital realm or the physical world. Computing 
           has been my gateway into this crazy journey, and I have a serious habit of experimenting with things.
         </p>
