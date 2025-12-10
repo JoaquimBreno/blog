@@ -2,22 +2,22 @@
     <channel>
         <title><![CDATA[Joaquim Breno]]></title>
         <description><![CDATA[An unconventional blog exploring tech adventures and personal insights, through the unique lens of Joaquim Breno.]]></description>
-        <link>http://localhost:3000</link>
+        <link>https://joaquimbreno.com</link>
         <image>
-            <url>http://localhost:3000/logo.jpeg</url>
+            <url>https://joaquimbreno.com/logo.jpeg</url>
             <title>Joaquim Breno</title>
-            <link>http://localhost:3000</link>
+            <link>https://joaquimbreno.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 07 Dec 2025 18:40:20 GMT</lastBuildDate>
-        <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 07 Dec 2025 18:40:20 GMT</pubDate>
+        <lastBuildDate>Wed, 10 Dec 2025 20:25:41 GMT</lastBuildDate>
+        <atom:link href="https://joaquimbreno.com/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Wed, 10 Dec 2025 20:25:41 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2025]]></copyright>
         <item>
             <title><![CDATA[Introducing Our New Next.js Blogging System with Tailwind CSS]]></title>
             <description><![CDATA[A look at our sleek and efficient new blogging system built with Next.js and Tailwind CSS, designed for fast, responsive, and visually appealing content delivery.]]></description>
-            <link>http://localhost:3000/blog/post1</link>
-            <guid isPermaLink="true">http://localhost:3000/blog/post1</guid>
+            <link>https://joaquimbreno.com/blog/post1</link>
+            <guid isPermaLink="true">https://joaquimbreno.com/blog/post1</guid>
             <category><![CDATA[Web Development]]></category>
             <dc:creator><![CDATA[Joaquim Breno]]></dc:creator>
             <pubDate>Mon, 17 Feb 2025 00:00:00 GMT</pubDate>
