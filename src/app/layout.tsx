@@ -34,17 +34,26 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="pt">
       <head>
         <title>Joaquim Breno</title>
         <meta name="description" content="An unconventional blog exploring tech adventures and personal insights, through the unique lens of Joaquim Breno." />
+        
+        {/* SEO - Hreflang and Canonical */}
+        <link rel="alternate" hrefLang="pt" href="https://joaquimbreno.com/pt" />
+        <link rel="alternate" hrefLang="en" href="https://joaquimbreno.com/en" />
+        <link rel="alternate" hrefLang="x-default" href="https://joaquimbreno.com/pt" />
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://joaquimbreno.com" />
         <meta property="og:title" content="Joaquim Breno" />
         <meta property="og:description" content="An unconventional blog exploring tech adventures and personal insights, through the unique lens of Joaquim Breno." />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:locale:alternate" content="en_US" />
+        
         <meta name="google-site-verification" content="Af4coKDHkz3c1dZuVrD0QaPW_EgObxDq46jsvM6F4eA" />
+        
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"

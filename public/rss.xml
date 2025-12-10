@@ -9,16 +9,16 @@
             <link>http://localhost:3000</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 10 Dec 2025 20:40:57 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 10 Dec 2025 23:56:19 GMT</lastBuildDate>
         <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 10 Dec 2025 20:40:57 GMT</pubDate>
+        <pubDate>Wed, 10 Dec 2025 23:56:19 GMT</pubDate>
         <copyright><![CDATA[All rights reserved 2025]]></copyright>
         <item>
-            <title><![CDATA[Introducing Our New Next.js Blogging System with Tailwind CSS]]></title>
-            <description><![CDATA[A look at our sleek and efficient new blogging system built with Next.js and Tailwind CSS, designed for fast, responsive, and visually appealing content delivery.]]></description>
+            <title><![CDATA[Apresentando Nosso Novo Sistema de Blog com Next.js e Tailwind CSS]]></title>
+            <description><![CDATA[Um olhar sobre nosso novo sistema de blog elegante e eficiente construído com Next.js e Tailwind CSS, projetado para entrega de conteúdo rápida, responsiva e visualmente atraente.]]></description>
             <link>http://localhost:3000/blog/post1</link>
             <guid isPermaLink="true">http://localhost:3000/blog/post1</guid>
-            <category><![CDATA[Web Development]]></category>
+            <category><![CDATA[Desenvolvimento Web]]></category>
             <dc:creator><![CDATA[Joaquim Breno]]></dc:creator>
             <pubDate>Mon, 17 Feb 2025 00:00:00 GMT</pubDate>
         </item>

@@ -1,14 +1,19 @@
-import MainContent from '@/components/MainContent';
-import Footer from '@/components/Footer';
+import { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Joaquim Breno - ML Engineer & Computer Engineer',
+  description: 'Blog pessoal sobre Machine Learning, tecnologia e desenvolvimento de software.',
+  alternates: {
+    canonical: 'https://joaquimbreno.com',
+    languages: {
+      'pt': 'https://joaquimbreno.com/pt',
+      'en': 'https://joaquimbreno.com/en',
+    },
+  },
+};
 
-  return (
-    <div className="min-h-screen bg-white text-black">
-    <div className="flex flex-col lg:flex-row">
-      <MainContent />
-    </div>
-      <Footer />
-    </div>
-  );
+export default function RootPage() {
+  // Redirect root to /pt/ - middleware will handle this
+  redirect('/pt');
 }

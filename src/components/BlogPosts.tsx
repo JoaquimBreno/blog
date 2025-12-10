@@ -6,12 +6,14 @@ import { Github, Twitter, Linkedin } from "lucide-react";
 import RelatedPosts from "@/components/RelatedPosts";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import SocialShare from "@/components/SocialShare";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import Image from "next/image";
 
 const BlogPost: React.FC<{
   post: BlogPostProps;
   relatedPosts: BlogPostProps[];
-}> = ({ post, relatedPosts }) => {
+  locale?: string;
+}> = ({ post, relatedPosts, locale = 'pt' }) => {
   if (!post) {
     return (
       <div className="container mx-auto px-4 py-8 text-center">
@@ -37,10 +39,13 @@ const BlogPost: React.FC<{
     <div className="bg-white text-black font-sans leading-normal tracking-normal" style={{ fontFamily: "Geist Mono, monospace" }}>
       <header className="fixed w-full z-10 top-0 bg-white bg-opacity-95 backdrop-blur-md transition duration-300 border-b border-gray-300">
         <ScrollProgressBar />
-        <nav className="container mx-auto px-4 py-2">
-          <Link href="/blog">
-            <span className="hover:underline" style={{ fontFamily: "Geist Mono, monospace" }}>← Back to Blog</span>
+        <nav className="container mx-auto px-4 py-2 flex justify-between items-center">
+          <Link href={`/${locale}/blog`}>
+            <span className="hover:underline" style={{ fontFamily: "Geist Mono, monospace" }}>
+              {locale === 'pt' ? '← Voltar para Blog' : '← Back to Blog'}
+            </span>
           </Link>
+          <LanguageSwitcher />
         </nav>
       </header>
 

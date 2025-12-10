@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Linkedin, Github } from "lucide-react";
 
-export function Profile() {
+export function Profile({ locale = 'pt' }: { locale?: string }) {
   return (
     <div className="max-w-2xl">
       <div className="mb-8">

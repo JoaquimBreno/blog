@@ -25,8 +25,8 @@ const GITHUB_API = `https://api.github.com/repos/${GITHUB_REPO}/contents`;
 const GITHUB_RAW = `https://raw.githubusercontent.com/${GITHUB_REPO}/main`;
 
 
-export async function getBlogPosts(): Promise<BlogPostProps[]> {
-  console.log('Fetching blog posts from GitHub...');
+export async function getBlogPosts(locale: string = 'pt'): Promise<BlogPostProps[]> {
+  console.log(`Fetching blog posts from GitHub (${locale})...`);
 
   try {
     const headers: HeadersInit = {
@@ -41,7 +41,9 @@ export async function getBlogPosts(): Promise<BlogPostProps[]> {
       headers.Authorization = `token ${process.env.GITHUB_TOKEN}`;
     }
 
-    const response = await fetch(GITHUB_API, { headers });
+    // Fetch from locale-specific folder (pt/ or en/)
+    const localeAPI = `${GITHUB_API}/${locale}`;
+    const response = await fetch(localeAPI, { headers });
 
     if (!response.ok) {
       throw new Error(`GitHub API responded with status ${response.status}: ${await response.text()}`);

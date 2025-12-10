@@ -1,5 +1,37 @@
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://joaquimbreno.com', // Replace with your site URL
-    generateRobotsTxt: true, // (optional) Generate a robots.txt file or update existing one
-    sitemapSize: 7000, // Adjust according to need
-  };
+  siteUrl: process.env.SITE_URL || 'https://joaquimbreno.com',
+  generateRobotsTxt: true,
+  changefreq: 'weekly',
+  priority: 0.7,
+  sitemapSize: 5000,
+  exclude: ['/api/*', '/admin/*'],
+  
+  // i18n configuration for SEO
+  alternateRefs: [
+    {
+      href: 'https://joaquimbreno.com/pt',
+      hreflang: 'pt',
+    },
+    {
+      href: 'https://joaquimbreno.com/en',
+      hreflang: 'en',
+    },
+    {
+      href: 'https://joaquimbreno.com',
+      hreflang: 'x-default',
+    },
+  ],
+  
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
+    additionalSitemaps: [
+      'https://joaquimbreno.com/sitemap.xml',
+    ],
+  },
+};
