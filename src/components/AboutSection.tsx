@@ -5,7 +5,7 @@ export function AboutSection({ locale = 'pt' }: { locale?: string }) {
 
   } : {
     intro: 'Joaquim Breno is a Brazilian computer engineer interested in ideas surrounding machine learning, tech culture, software development, and artificial intelligence.',
-    p1: 'Hey there! I&apos;m someone who gets a real kick out of seeing my knowledge solve real-world problems—bonus points if I can actually see it working, whether in the digital realm or the physical world. Computing has been my gateway into this crazy journey, and I have a serious habit of experimenting with things.',
+    p1: 'Hey there! Im someone who gets a real kick out of seeing my knowledge solve real-world problems—bonus points if I can actually see it working, whether in the digital realm or the physical world. Computing has been my gateway into this crazy journey, and I have a serious habit of experimenting with things.',
     p2: 'In this blog, I share bits of my experiences, from my very first steps in tech to my latest adventures. Hopefully, even the nonsense I write here helps someone with similar interests.',
   };
 

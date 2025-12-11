@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Sidebar } from "@/components/Sidebar";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import Head from "next/head";
 import "./globals.css";
 
@@ -64,6 +65,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black`}
         style={{ fontFamily: "var(--font-geist-mono)" }}
       >
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
         <div className="lg:flex min-h-screen bg-white">
           <Sidebar className="w-48 border-r border-gray-300" ></Sidebar>
           <main className="flex-1" style={{ fontFamily: "var(--font-geist-mono)", lineHeight: "150%" }}>
