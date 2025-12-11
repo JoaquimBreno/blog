@@ -12,8 +12,8 @@ const BlogList = dynamic(() => import('@/components/BlogLists'), {
   ssr: true
 });
 
-// Revalidate every hour for better performance
-export const revalidate = 3600;
+// Revalidate every 5 minutes (or use API route for instant updates)
+export const revalidate = 300;
 
 export async function generateStaticParams() {
   return [

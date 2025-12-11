@@ -7,8 +7,8 @@ import { getAllPosts } from '@/lib/getcachedposts';
 import { Suspense } from 'react';
 import Loader from '@/components/ui/loader';
 
-// Revalidate every hour for better performance
-export const revalidate = 3600;
+// Revalidate every 5 minutes (or use API route for instant updates)
+export const revalidate = 300;
 
 export async function generateStaticParams() {
   return [
