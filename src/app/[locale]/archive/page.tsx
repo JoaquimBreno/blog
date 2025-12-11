@@ -2,7 +2,6 @@ import BlogList from '@/components/BlogLists';
 import { Metadata } from 'next';
 import React from 'react';
 import Footer from '@/components/FooterRSS';
-import { generateRssFeed } from '@/lib/rss';
 import { getAllPosts } from '@/lib/getcachedposts';
 import { Suspense } from 'react';
 import Loader from '@/components/ui/loader';
@@ -47,11 +46,6 @@ export default async function ArchivePage({ params }: { params: Promise<{ locale
 
   try {
     const posts = await getAllPosts(locale);
-    try {
-      generateRssFeed(posts);
-    } catch (rssError) {
-      console.error('Error generating RSS feed:', rssError);
-    }
     return (
       <div className="flex-1 p-4 lg:p-8 bg-white">
         <div className="max-w-4xl mx-auto">

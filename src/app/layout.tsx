@@ -16,6 +16,15 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const metadata: Metadata = {
+  metadataBase: new URL('https://joaquimbreno.com'),
+  title: {
+    default: 'Joaquim Breno',
+    template: '%s | Joaquim Breno',
+  },
+  description: 'Blog sobre Machine Learning, tecnologia e desenvolvimento de software',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,6 +63,11 @@ export default function RootLayout({
         <meta property="og:locale:alternate" content="en_US" />
         
         <meta name="google-site-verification" content="Af4coKDHkz3c1dZuVrD0QaPW_EgObxDq46jsvM6F4eA" />
+        
+        {/* RSS Feeds */}
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed (PT)" href="/rss-pt.xml" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed (EN)" href="/rss-en.xml" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
         
         {/* JSON-LD Structured Data */}
         <script

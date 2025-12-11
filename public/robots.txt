@@ -1,19 +1,9 @@
-# Allow all bots to crawl everything
+# *
 User-agent: *
 Allow: /
 
-# Sitemap locations
+# Host
+Host: https://joaquimbreno.com
+
+# Sitemaps
 Sitemap: https://joaquimbreno.com/sitemap.xml
-Sitemap: https://joaquimbreno.com/sitemap-0.xml
-
-# Specific rules for language versions
-Allow: /pt/
-Allow: /en/
-
-# Block admin and API routes (if any)
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
-
-# Crawl delay (optional, helps with server load)
-Crawl-delay: 0.5

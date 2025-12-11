@@ -3,7 +3,6 @@ import { getAllPosts } from "@/lib/getcachedposts";
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { generateRssFeed } from '@/lib/rss';
 import Footer from '@/components/FooterRSS';
 import { Suspense } from "react";
 import Loader from '@/components/ui/loader';
@@ -51,12 +50,6 @@ export default async function BlogContent({ params }: { params: Promise<{ locale
   try {
     const posts = await getAllPosts(locale);
     const latestPosts = posts.slice(0, 5);
-    
-    try {
-      generateRssFeed(posts);
-    } catch (rssError) {
-      console.error('Error generating RSS feed:', rssError);
-    }
     
     return (
       <div className="flex-1 p-4 lg:p-8 bg-white">
