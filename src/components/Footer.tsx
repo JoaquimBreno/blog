@@ -15,7 +15,7 @@ function Footer() {
           {' / '}
           <Link href="/archive" className="hover:underline transition-opacity hover:opacity-70">Archive</Link>
           {' / '}
-          <a href="/rss-pt.xml" className="hover:underline transition-opacity hover:opacity-70">RSS</a>
+          <a href="/pt/rss.xml" className="hover:underline transition-opacity hover:opacity-70">RSS</a>
           {' / '}
           <a href="https://twitter.com/JoaquimBreno" target="_blank" rel="noopener noreferrer" className="hover:underline transition-opacity hover:opacity-70">Twitter</a>
         </p>

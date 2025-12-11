@@ -9,12 +9,12 @@ function Footer() {
           <Twitter size={20} />
         </a>
         <div className="flex items-center gap-2">
-          <a href="/rss-pt.xml" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline transition-opacity hover:opacity-70" style={{ fontFamily: "Geist Mono, monospace" }}>
+          <a href="/pt/rss.xml" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline transition-opacity hover:opacity-70" style={{ fontFamily: "Geist Mono, monospace" }}>
             <Rss size={16} />
             <span>RSS PT</span>
           </a>
           <span className="opacity-30">|</span>
-          <a href="/rss-en.xml" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline transition-opacity hover:opacity-70" style={{ fontFamily: "Geist Mono, monospace" }}>
+          <a href="/en/rss.xml" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:underline transition-opacity hover:opacity-70" style={{ fontFamily: "Geist Mono, monospace" }}>
             <Rss size={16} />
             <span>RSS EN</span>
           </a>
