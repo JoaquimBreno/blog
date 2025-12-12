@@ -35,3 +35,4 @@ export default async function Subscribe({ params }: { params: Promise<{ locale: 
   );
 }
 
+
